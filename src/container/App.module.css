@@ -27,12 +27,5 @@ input[type="text"] , input[type="text"]:focus{
 .Error{
   font-weight: bold;
   color: red;
-  height: 20px;
-}
-
-
-@media (min-width: 1200px) {
-  .App{
-    width: 80%;
-  }
+  min-height: 30px;
 }

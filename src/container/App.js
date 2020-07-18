@@ -10,15 +10,15 @@ function App() {
 
   const onChangHandler = (event) => {
     //Regex for matching proper input
-    const regex = /^([1-9][0-9]?){0,1}(?:\/([1-9][0-9]?){0,1})*\/?$/;
+    const regex = /^([1-9]|[1-3][0-9]?){0,1}(?:\/([1-9]|[1-3][0-9]?){0,1})*\/?$/;
 
-    // if value is not blank, then test the regex
+    // if value is not blank, then test the regex else output Error
     if (event.target.value === "" || regex.test(event.target.value)) {
       setInputError("");
       setInputString(event.target.value);
     } else {
       setInputError(
-        "Please type in the right format (1/2/3/...) each number should be less than 100"
+        "Please type in the right format (1/2/3/...) each number should be less than 40"
       );
     }
   };
