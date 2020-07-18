@@ -1,13 +1,15 @@
 .Layout{
-    margin: 30px auto;
-    width: 80%;
-
+    margin: 0 auto;
 }
-
+.InputError{
+    font-weight: bold;
+    color:red;
+    text-align: center;
+    flex:1
+}
 .Row {
     width: 100%;
     height: 150px;
-    border: 2px solid blue;
     display: flex;
     flex-flow: nowrap row;
 }
@@ -17,4 +19,9 @@
     flex: 1;
     background-color: aqua;
     border:1px solid #333;
+}
+
+
+@media (min-width: 1200px) {
+
 }

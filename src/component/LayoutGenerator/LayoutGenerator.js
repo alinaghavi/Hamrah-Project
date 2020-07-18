@@ -7,18 +7,22 @@ const LayoutGenerator = (props) => {
     .split("/")
     .filter((item) => item !== "");
 
-  const layout = NumberOfRows.map((row) => {
+  const WrapperRow = NumberOfRows.map((row, index) => {
     //Compute number of columns in each row and generate a div
     const numberOfBoxes = new Array(+row).fill("1");
 
-    const layout = numberOfBoxes.map((box) => (
-      <div className={styles.Column}></div>
+    const innerColumns = numberOfBoxes.map((_, index) => (
+      <div className={styles.Column} key={index}></div>
     ));
 
-    return <div className={styles.Row}>{layout}</div>;
+    return (
+      <div className={styles.Row} key={index}>
+        {innerColumns}
+      </div>
+    );
   });
 
-  return <div className={styles.Layout}>{layout}</div>;
+  return <div className={styles.Layout}>{WrapperRow}</div>;
 };
 
 export default LayoutGenerator;
